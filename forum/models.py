@@ -32,7 +32,6 @@ class comment(models.Model):
     id = models.AutoField(verbose_name='评论编号', primary_key=True)
     puber = models.ForeignKey(user, on_delete=models.CASCADE, verbose_name='评论人')
     created_time = models.DateTimeField(verbosde_name='评论时间', auto_now_add=True)
-    leadComment = models.ForeignKey('self', on_delete=models.CASCADE, null=True, verbose_name='父级评论')
     topicComment = models.ForeignKey(topic, on_delete=models.CASCADE)
     class Meta:
         db_table='forum_comment'

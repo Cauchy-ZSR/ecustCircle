@@ -9,5 +9,6 @@ class chatMessage(models.Model):
     receiver = models.ForeignKey(user, on_delete=models.CASCADE, verbose_name='接收人')
     sender = models.ForeignKey(user, on_delete=models.CASCADE, verbose_name='发送人')
     messageForum = models.ForeignKey(forum, verbose_name='发布论坛')
+    postTime = models.DateTimeField(verbose_name='发送时间', auto_now_add=True)
     class Meta:
         db_table = 'chat_chatMessage'
