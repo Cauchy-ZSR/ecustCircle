@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view>
+  <!--  搜索框  -->
+  <searchinput></searchinput>
+  <scroll-view scroll-y class="listcontent">
+      <view class="viewlist">
+        <!--之后使用wx:for navigator中链接用论坛链接代替-->
+        <navigator url="../../pages/post/post">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+        <navigator url="#">
+          <view class="viewtitle">论坛标题</view>
+          <view class="viewcreator">论坛作者，日期</view>
+          <view class="divline"></view>
+        </navigator>
+
+      </view>
+  </scroll-view>
+</view>
