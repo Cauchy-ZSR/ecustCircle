@@ -1,0 +1,22 @@
+<!--pages/post/post.wxml-->
+<view>
+    <!--  搜索框  -->
+    <searchinput></searchinput>
+    <block wx:if="{{authorizednumber === number}}" class="createnotice">
+        <button bindtap="jmptosend" class="sendnotice">
+            <view >
+              <text>发布通知</text>
+            </view>
+        </button>
+    </block>
+    <scroll-view scroll-y class="listcontent">
+        <view class="viewlist">
+            <!--与论坛页面同理，之后补上后台交互参数-->
+            <navigator url="../../pages/reply/reply">
+                <view class="postcontent">帖子内容</view>
+                <view class="postcreator">帖子作者，日期</view>
+                <view class="divline"></view>
+            </navigator>
+        </view>
+    </scroll-view>
+</view>
