@@ -9,6 +9,7 @@
     "pages/reply/reply",
     "pages/login/index",
     "pages/change/change",
+    "pages/complete/complete",
     "pages/sendmail/sendmail"
   ],
   "window":{

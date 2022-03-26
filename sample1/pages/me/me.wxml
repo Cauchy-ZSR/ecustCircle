@@ -30,17 +30,18 @@
         <text>{{sex}}</text>
       </view>
       <view class="app_info_item app_info_contact">
-        <text>电话 </text>
-        <text>{{tel}}</text>
-      </view>
-      <view class="app_info_item app_info_contact">
         <text>电子邮箱</text>
         <text>{{email}}</text>
       </view>
     </view>
-    <button bindtap="jmptochange" class="changeinfo">
+    <button wx:if="{{!firstuse}}" bindtap="jmptochange" class="changeinfo">
       <view >
         <text>修改信息</text>
+      </view>
+    </button>
+    <button wx:if="{{firstuse}}" bindtap="jmptocomplete" class="changeinfo">
+      <view >
+        <text>完善信息</text>
       </view>
     </button>
   </view>

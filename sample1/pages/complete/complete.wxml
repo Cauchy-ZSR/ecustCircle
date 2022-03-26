@@ -1,0 +1,32 @@
+<!--pages/change/change.wxml-->
+<form bindsubmit='changeinfo'>
+    <view class="inputsection">
+    身份
+    <input type="text" name="inputposition" placeholder="只允许填入一次"/>
+  </view>
+  <view class="divline"></view>
+  <view class="inputsection">
+    学号/工号
+    <input type="text" name="inputnumber" placeholder="只允许填入一次"/>
+  </view>
+  <view class="divline"></view>
+  <view class="inputsection">
+    性别
+    <input type="text" name="inputsex" placeholder=""/>
+  </view>
+  <view class="divline"></view>
+  <view class="inputsection">
+    电话
+    <input type="text" name="inputtel" placeholder=""/>
+  </view>
+  <view class="divline"></view>
+  <view class="inputsection">
+    电子邮箱
+    <input type="text" name="inputemail" placeholder=""/>
+  </view>
+  <button formType="submit" class="changeinfo">
+    <view >
+      <text>提交</text>
+    </view>
+  </button>
+</form>

@@ -1,21 +1,36 @@
 // pages/change/change.js
 Page({
-
+data:{
+ usrposition:'',
+ usrnumber:'',
+ usrsex:'',
+ usremail:''
+},
 
 
 changeinfo:function(e){
   var changesex = e.detail.value.inputsex;
-  var changetel = e.detail.value.inputtel;
   var changeemail = e.detail.value.inputemail;
-  console.log(changesex);
-  var pages = getCurrentPages();
-  var prepage = pages[pages.length-2];
-  prepage.setData({
-      sex : changesex,
-      tel : changetel,
-      email : changeemail
-  })
-  console.log(prepage);
+  var nickname = wx.getStorageInfoSync('nickname');
+  wx.request({
+    url: 'http://127.0.0.1:8000/userApi/user/create/',
+    data: {
+    userNo:this.data.usrposition,
+    nickname:nickname,
+    sex: changesex,
+    email:changeemail,    
+    identity:this.data.usrposition,
+    },
+    header: {'content-type':'application/json'},
+    method: 'post',
+    dataType: 'json',
+    responseType: 'text',
+    success: (result)=>{
+        console.log('成功修改');
+    },
+    fail: ()=>{},
+    complete: ()=>{}
+})
   wx.navigateBack({//返回
 
     delta:1
@@ -25,8 +40,9 @@ changeinfo:function(e){
 
   onLoad: function (options) {
     this.setData({
+      usrposition:options.position,
+      usrnumber:options.number,
       usrsex:options.sex,
-      usrtel:options.tel,
       usremail:options.email
     })
   },
