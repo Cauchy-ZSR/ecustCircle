@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="allbox">
+  <block class="crtforum">
+    <button bindtap="jmptocrtforum" class="sendnotice">
+      <view>
+        <text>创建论坛</text>
+      </view>
+    </button>
+  </block>
+  <view class="classcontainer">
+  <scroll-view scroll-y class="listcontent">
+      <view class="viewlist"
+      wx:for="{{leftmenulist}}"
+      wx:key="id"
+      bindtap="selectclass"
+      data-index="{{index}}"
+      >
+      <view class="selectit{{choseid === item.id?'':'active'}}">
+        {{item.classname}}
+      </view>
+    
+      </view>
+  </scroll-view>
+  <scroll-view scroll-y class="showlist">
+  <view scroll-y class="showlist"
+  wx:for="{{rightcontent}}"
+  wx:for-index="index"
+  wx:for-item="item"
+  wx:key="*this">
+    <navigator class="eachshow" url="/pages/post/post">
+      <view class="viewtitle">{{item.forumtitle}}</view>
+      <view class="viewcreator">{{item.forumcreator}},{{item.forumdate}}</view>
+      <view class="divline"></view>
+    </navigator>
+  </view>
+  </scroll-view>
+</view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/change/change.wxml-->
+<form bindsubmit='changeinfo'>
+  <view class="inputsection">
+    性别
+    <input type="text" name="inputsex" placeholder="{{usrsex}}"/>
+  </view>
+  <view class="divline"></view>
+  <view class="inputsection">
+    电话
+    <input type="text" name="inputtel" placeholder="{{usrtel}}"/>
+  </view>
+  <view class="divline"></view>
+  <view class="inputsection">
+    电子邮箱
+    <input type="text" name="inputemail" placeholder="{{usremail}}"/>
+  </view>
+  <button formType="submit" class="changeinfo">
+    <view >
+      <text>提交</text>
+    </view>
+  </button>
+</form>

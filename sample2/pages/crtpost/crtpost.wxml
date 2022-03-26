@@ -1,0 +1,10 @@
+<!--pages/sendmail/sendmail.wxml-->
+<view>
+  <form bindsubmit="crtpost">
+    <view class="inputtitle">帖子标题</view>
+    <view class="padding"><input class="inputvalue" maxlength="10" name="posttitle"/></view>
+    <view class="inputcontent">帖子内容</view>
+    <view class="padding"><textarea name="postcontent" auto-height class="inputvalue"></textarea></view>
+    <button form-type="submit" class="submitbtn"> 创建 </button>
+  </form>
+</view>

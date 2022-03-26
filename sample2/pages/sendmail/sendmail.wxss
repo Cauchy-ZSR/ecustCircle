@@ -1,0 +1,29 @@
+/* pages/sendmail/sendmail.wxss */
+.inputtitle{
+  text-align: center;
+  color: #fc5531;
+  font-weight: 1000;
+}
+
+.padding{
+  padding: 0.5%;
+  background-color: #a8a8a8;
+}
+
+.inputvalue{
+  background-color: white;
+  width:100%;
+}
+
+.inputcontent{
+  text-align: center;
+  color: #fc5531;
+  font-weight: 1000;
+}
+
+.submitbtn{
+  margin:50px;
+  color: white;
+  background-color: #fc5531;
+}
+

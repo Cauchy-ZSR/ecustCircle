@@ -1,0 +1,60 @@
+
+<view class="user_info_wrap">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称1 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+<view class="user_content">
+  
+  <view class="user_main">
+
+    <!-- 应用信息相关 -->
+    <view class="app_info_wrap">
+      <view class="app_info_item app_info_contact">
+        <text>身份</text>
+        <text>{{position}}</text>
+      </view>
+      <view class="app_info_item app_info_contact">
+        <text>学号/工号</text>
+        <text>{{number}}</text>
+      </view>
+      <view class="app_info_item app_info_contact">
+        <text>性别</text>
+        <text>{{sex}}</text>
+      </view>
+      <view class="app_info_item app_info_contact">
+        <text>电话 </text>
+        <text>{{tel}}</text>
+      </view>
+      <view class="app_info_item app_info_contact">
+        <text>电子邮箱</text>
+        <text>{{email}}</text>
+      </view>
+    </view>
+
+    <view class="orders_wrap">
+      <view class="order_content">
+        <navigator url="/pages/sent/sent">
+          <view class="iconfont icon-export"></view>
+          <view class="order_name">已发送</view>
+        </navigator>
+        <navigator url="{{existunread==true?'/pages/unread/unread':'#'}}">
+          <view class="iconfont {{existunread==true? 'icon-weiduxinxi':'icon-xiaoxi'}}"></view>
+          <view class="order_name">评论</view>
+        </navigator>
+      </view>
+    </view>
+    <button bindtap="jmptochange" class="changeinfo">
+      <view >
+        <text>修改信息</text>
+      </view>
+    </button>
+  </view>
+</view>
