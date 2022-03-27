@@ -9,8 +9,11 @@
     "pages/reply/reply",
     "pages/login/index",
     "pages/change/change",
-    "pages/complete/complete",
-    "pages/sendmail/sendmail"
+    "pages/sendmail/sendmail",
+    "pages/crtforum/crtforum",
+    "pages/crtpost/crtpost",
+    "pages/sent/sent",
+    "pages/unread/unread"
   ],
   "window":{
     "backgroundTextStyle":"dark",
