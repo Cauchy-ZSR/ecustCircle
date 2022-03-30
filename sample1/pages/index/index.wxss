@@ -86,3 +86,12 @@ navigator{
 .selectit{
   color: #fc5531;
 }
+
+.sendnotice{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px;
+  background-color: #fc5531;
+  color: white;
+}

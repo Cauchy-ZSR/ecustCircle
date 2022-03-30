@@ -4,6 +4,23 @@ Page({
     var inputposttitle = e.detail.value.posttitle;
     var inputpostcontent = e.detail.value.postcontent;
     console.log(inputposttitle,inputpostcontent);
+    wx.request({
+      url: 'http://127.0.0.1:8000/forumApi/topic/create/',
+      data: {
+        name:inputposttitle,
+        intro: inputpostcontent,
+        creater_id:wx.getStorageSync('number')
+      },
+        header: {'content-type':'application/json'},
+        method: 'post',
+        dataType: 'json',
+        responseType: 'text',
+        success: (result)=>{
+            console.log('成功修改');
+        },
+        fail: ()=>{},
+        complete: ()=>{}
+    })
     wx.navigateBack({
       delta: 1,
     });

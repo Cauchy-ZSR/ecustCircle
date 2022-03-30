@@ -5,6 +5,13 @@
     <view class="padding"><input class="inputvalue" maxlength="10" name="forumtitle"/></view>
     <view class="inputcontent">论坛主题</view>
     <view class="padding"><textarea name="forumcontent" auto-height class="inputvalue"></textarea></view>
+    <block>
+      <view class="inputcontent">论坛类别</view>
+      <radio-group name = "classname">
+        <label><radio value="类别一">类别一</radio></label>
+        <label><radio value="类别二">类别二</radio></label>
+      </radio-group>
+    </block>
     <button form-type="submit" class="submitbtn"> 创建 </button>
   </form>
 </view>

@@ -4,17 +4,20 @@ Page({
 
 
     changeinfo:function(e){
-      var  completeposition = e.detail.value.inputpostion;
+      var  completeposition = e.detail.value.inputposition;
       var  completenumber = e.detail.value.inputnumber;
       var completesex = e.detail.value.inputsex;
       var  completeemail = e.detail.value.inputemail;
-      var nickname = wx.getStorageInfoSync('nickname');
+      var  completetel = e.detail.value.inputtel;
+      var nickname = wx.getStorageSync('userinfo').nickName;
+      console.log(nickname.nickName);
       wx.request({
         url: 'http://127.0.0.1:8000/userApi/user/create/',
         data: {
         userNo:completenumber,
         nickname:nickname,
-        sex: completesex,
+        // sex: true,
+        phone: completetel,
         email:completeemail,    
         identity:completeposition,
         },
@@ -23,7 +26,7 @@ Page({
         dataType: 'json',
         responseType: 'text',
         success: (result)=>{
-            console.log('成功修改');
+            
         },
         fail: ()=>{},
         complete: ()=>{}

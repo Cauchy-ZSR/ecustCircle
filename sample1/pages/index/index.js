@@ -246,6 +246,12 @@ Page({
       rightcontent,
       choseid
     })
+  },
+
+  jmptocrtforum(){
+    wx.navigateTo({
+      url: '/pages/crtforum/crtforum',
+    })
   }
 })
 

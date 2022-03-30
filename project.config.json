@@ -1,12 +1,7 @@
 {
     "description": "项目配置文件",
     "packOptions": {
-        "ignore": [
-            {
-                "type": "file",
-                "value": ".eslintrc.js"
-            }
-        ]
+        "ignore": []
     },
     "setting": {
         "urlCheck": false,
@@ -25,7 +20,7 @@
         "checkInvalidKey": true,
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
-        "compileHotReLoad": true,
+        "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": true,
         "useApiHook": true,
@@ -47,9 +42,9 @@
         "useCompilerPlugins": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.21.4",
+    "libVersion": "2.23.2",
     "appid": "wxba15421623870c9f",
-    "projectname": "sample1",
+    "projectname": "miniprogram-2",
     "debugOptions": {
         "hidedInDevtools": []
     },

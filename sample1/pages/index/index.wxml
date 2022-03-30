@@ -1,7 +1,12 @@
 <!--index.wxml-->
 <view class="allbox">
-  <!--  搜索框  -->
-  <searchinput></searchinput>
+  <block class="crtforum">
+    <button bindtap="jmptocrtforum" class="sendnotice">
+      <view>
+        <text>创建论坛</text>
+      </view>
+    </button>
+  </block>
   <view class="classcontainer">
   <scroll-view scroll-y class="listcontent">
       <view class="viewlist"

@@ -8,7 +8,7 @@ Page({
     userinfo:{},
     hasUserInfo: false,
     canIUseGetUserProfile: false,
-    existunread:true,
+    existunread:false,
   },
   onShow(){
     const userinfo=wx.getStorageSync("userinfo");
@@ -37,7 +37,13 @@ Page({
 
   jmptochange:function(){
     wx.navigateTo({
-      url: '../../pages/change/change?position=' + this.data.position + '&number=' + this.data.number + '&sex=' + this.data.sex + '&tel=' + this.data.tel + '&email=' + this.data.email,
+      url: '../../pages/change/change?position=' + this.data.position + '&number=' + this.data.number + '&sex=' + this.data.sex + '&email=' + this.data.email,
+    })
+  },
+
+  jmptocomplete:function(){
+    wx.navigateTo({
+      url: '../../pages/complete/complete',
     })
   },
 
@@ -54,7 +60,45 @@ Page({
         })
         console.log('信息！！！！！！！：'+res.userInfo)
         wx.setStorageSync('userinfo', res.userInfo);
-      }
+        wx.request({
+          url: 'http://127.0.0.1:8000/userApi/user/retrieve/'+res.userInfo.nickName+'/',
+          data: '',
+          header: {'content-type':'application/json'},
+          method: 'get',
+          dataType: 'json',
+          responseType: 'text',
+          success: (result)=>{
+              console.log(result.data.code);
+              var firstflag = result.data.code;
+              if(firstflag == 404){
+                var firstuse = true;
+                this.setData({
+                  firstuse
+                })
+                console.log(this.data.firstuse);
+              }
+              else{
+                var position = result.data.identity;
+                var number = result.data.userNo;
+                wx.setStorageSync('number', number);
+                var sexjudge = result.data.sex;
+                if(sexjudge){
+                  var sex = '男';
+                }
+                else{
+                  var sex = '女';
+                }
+                var email = result.data.email;
+                this.setData({
+                  position,number,sex,email
+                })
+              }
+          },
+          fail: ()=>{},
+          complete: ()=>{}
+      });     
+
+      },
     })
  
   },

@@ -11,18 +11,18 @@ data:{
 changeinfo:function(e){
   var changesex = e.detail.value.inputsex;
   var changeemail = e.detail.value.inputemail;
-  var nickname = wx.getStorageInfoSync('nickname');
+  var nickname = wx.getStorageSync('userinfo').nickName;
   wx.request({
-    url: 'http://127.0.0.1:8000/userApi/user/create/',
+    url: 'http://127.0.0.1:8000/userApi/user/update/'+this.data.usrnumber+'/',
     data: {
-    userNo:this.data.usrposition,
+    userNo:this.data.usrnumber,
     nickname:nickname,
-    sex: changesex,
+    // sex: changesex,
     email:changeemail,    
     identity:this.data.usrposition,
     },
     header: {'content-type':'application/json'},
-    method: 'post',
+    method: 'put',
     dataType: 'json',
     responseType: 'text',
     success: (result)=>{

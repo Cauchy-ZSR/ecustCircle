@@ -3,7 +3,26 @@ Page({
   crtforum:function(e){
     var inputforumtitle = e.detail.value.forumtitle;
     var inputforumcontent = e.detail.value.forumcontent;
+    var selectedclass = e.detail.value.classname;
     console.log(inputforumtitle,inputforumcontent);
+    wx.request({
+      url: 'http://127.0.0.1:8000/forumApi/forum/create/',
+      data: {
+        name:inputforumtitle,
+        intro: inputforumcontent,
+        tag:selectedclass,
+        creater_id:wx.getStorageSync('number')
+      },
+        header: {'content-type':'application/json'},
+        method: 'post',
+        dataType: 'json',
+        responseType: 'text',
+        success: (result)=>{
+            console.log('成功修改');
+        },
+        fail: ()=>{},
+        complete: ()=>{}
+    })
     wx.navigateBack({
       delta: 1,
     });
