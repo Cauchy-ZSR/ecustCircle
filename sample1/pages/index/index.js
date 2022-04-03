@@ -39,6 +39,46 @@ Page({
             forumtitle:"论坛标题5",
             forumcreator:"论坛作者",
             forumdate:"日期"
+          },
+          {
+            forumtitle:"论坛标题",
+            forumcreator:"论坛作者",
+            forumdate:"日期"
+          },
+          {
+            forumtitle:"论坛标题",
+            forumcreator:"论坛作者",
+            forumdate:"日期"
+          },
+          {
+            forumtitle:"论坛标题",
+            forumcreator:"论坛作者",
+            forumdate:"日期"
+          },
+          {
+            forumtitle:"论坛标题",
+            forumcreator:"论坛作者",
+            forumdate:"日期"
+          },
+          {
+            forumtitle:"论坛标题",
+            forumcreator:"论坛作者",
+            forumdate:"日期"
+          },
+          {
+            forumtitle:"论坛标题",
+            forumcreator:"论坛作者",
+            forumdate:"日期"
+          },
+          {
+            forumtitle:"论坛标题",
+            forumcreator:"论坛作者",
+            forumdate:"日期"
+          },
+          {
+            forumtitle:"论坛标题",
+            forumcreator:"论坛作者",
+            forumdate:"日期"
           }
         ]
       },
@@ -227,7 +267,7 @@ Page({
             forumdate:"日期"
           }
         ]
-      },
+      }
     ]
     let rightcontent = leftmenulist[0].children;
     this.setData({

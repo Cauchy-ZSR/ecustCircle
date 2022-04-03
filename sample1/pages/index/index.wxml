@@ -1,14 +1,27 @@
 <!--index.wxml-->
 <view class="allbox">
-  <block class="crtforum">
-    <button bindtap="jmptocrtforum" class="sendnotice">
+  <swiper autoplay indicator-dots>
+    <swiper-item>
+      <image src="../../images/swiper-1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/swiper-2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/swiper-3.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <view class="crtforum">
+    <navigator url="/pages/crtforum/crtforum" class="sendnotice">
+      <view class="iconfont icon-xiangmuchuangjian"></view>
       <view>
-        <text>创建论坛</text>
+        <text>创建</text>
       </view>
-    </button>
-  </block>
+    </navigator>
+  </view>
   <view class="classcontainer">
-  <scroll-view scroll-y class="listcontent">
+  <scroll-view scroll-y class="scrolllist">
+    <view class="listcontent">
       <view class="viewlist"
       wx:for="{{leftmenulist}}"
       wx:key="id"
@@ -18,8 +31,8 @@
       <view class="selectit{{choseid === item.id?'':'active'}}">
         {{item.classname}}
       </view>
-    
       </view>
+    </view>
   </scroll-view>
   <scroll-view scroll-y class="showlist">
   <view scroll-y class="showlist"

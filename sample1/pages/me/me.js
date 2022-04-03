@@ -9,6 +9,7 @@ Page({
     hasUserInfo: false,
     canIUseGetUserProfile: false,
     existunread:false,
+    islogin:true
   },
   onShow(){
     const userinfo=wx.getStorageSync("userinfo");
@@ -37,13 +38,13 @@ Page({
 
   jmptochange:function(){
     wx.navigateTo({
-      url: '../../pages/change/change?position=' + this.data.position + '&number=' + this.data.number + '&sex=' + this.data.sex + '&email=' + this.data.email,
+      url: '../change/change?position=' + this.data.position + '&number=' + this.data.number + '&sex=' + this.data.sex + '&email=' + this.data.email,
     })
   },
 
   jmptocomplete:function(){
     wx.navigateTo({
-      url: '../../pages/complete/complete',
+      url: '../complete/complete',
     })
   },
 
@@ -89,8 +90,9 @@ Page({
                   var sex = '女';
                 }
                 var email = result.data.email;
+                var islogin = true;
                 this.setData({
-                  position,number,sex,email
+                  position,number,sex,email,islogin
                 })
               }
           },

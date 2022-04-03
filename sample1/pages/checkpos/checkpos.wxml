@@ -1,0 +1,19 @@
+<!--pages/checkpos/checkpos.wxml-->
+<view class="allpage">
+    <image src="../../images/logo.jpg" mode="aspectFit"></image>
+    <view class="inputbox">
+        <view class="inputvalue">
+            <view class="iconfont icon-xingming"></view>
+            <label class="inputtip">账号</label>
+            <input class="inputtext" placeholder="请输入学号" bindinput="usrnameinput"/>
+        </view>
+        <view class="inputvalue">
+            <view class="iconfont icon-mima"></view>
+            <label class="inputtip">密码</label>
+            <input class="inputtext" password="true" placeholder="请输入密码" bindinput="passwordinput"/>
+        </view>
+        <view class="loginbtnbox">
+            <button class="loginbtn" type="primary" bindtap="login">登录</button>
+        </view>
+</view>
+</view>

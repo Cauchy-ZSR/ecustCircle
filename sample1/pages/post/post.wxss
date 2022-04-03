@@ -1,3 +1,7 @@
+.allpage{
+  background-color: #edece8;
+}
+
 .listcontent{
     display: flex;
     width: 100%;
@@ -29,10 +33,30 @@
   }
 
 .sendnotice{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
+  display: flex;
+  width: 20%;
+  font-size: 12px;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  border-right: 1rpx solid #edece8;
+}
+
+.crtforum{
   padding: 5px;
-  background-color: #fc5531;
-  color: white;
+  background-color: white;
+  border-bottom: 1rpx solid #ccc;
+  width: 95%;
+  margin: 0 auto;
+  height: 110rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.viewlist{
+  margin: 0 auto;
+  height:100vh;
+  width: 95%;
+  background: white;
 }

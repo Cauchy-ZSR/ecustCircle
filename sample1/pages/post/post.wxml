@@ -1,21 +1,19 @@
 <!--pages/post/post.wxml-->
-<view>
-    <!--  搜索框  -->
-    <searchinput></searchinput>
-    <block wx:if="{{authorizednumber === number}}" class="createnotice">
-        <button bindtap="jmptosend" class="sendnotice">
-            <view >
-              <text>发布通知</text>
-            </view>
-        </button>
-    </block>
-    <block class="crtforum">
-        <button bindtap="jmptocrtpost" class="sendnotice">
-          <view>
-            <text>发布帖子</text>
-          </view>
-        </button>
-      </block>
+<view class="allpage">
+  <view class="crtforum">
+    <navigator url="/pages/sendmail/sendmail" class="sendnotice" wx:if="{{authorizednumber === number}}">
+      <view class="iconfont icon-24gl-envelopeSent2"></view>
+      <view>
+        <text>发布通知</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/crtpost/crtpost" class="sendnotice">
+      <view class="iconfont icon-xiangmuchuangjian"></view>
+      <view>
+        <text>创建</text>
+      </view>
+    </navigator>
+  </view>
     <scroll-view scroll-y class="listcontent">
         <view class="viewlist">
             <!--与论坛页面同理，之后补上后台交互参数-->

@@ -31,11 +31,18 @@ Page({
         fail: ()=>{},
         complete: ()=>{}
     })
-      wx.navigateBack({//返回
-    
-        delta:1
-        
-        })
+      wx.redirectTo({
+        url: '/pages/me/me',
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
     }  ,
     
 

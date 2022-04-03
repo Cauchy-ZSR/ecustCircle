@@ -1,0 +1,31 @@
+/* pages/checkpos/checkpos.wxss */
+.inputbox{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.inputbox{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+}
+
+.inputvalue{
+    width:60%;
+    border:5rpx solid #edece8;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10rpx;
+}
+
+.inputtip{
+    font-size: 30rpx;
+    flex-basis: 15%;
+}
+
+.inputtext{
+    text-align: right;
+}
