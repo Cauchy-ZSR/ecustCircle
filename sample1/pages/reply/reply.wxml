@@ -1,13 +1,28 @@
 <!--pages/reply/reply.wxml-->
 <view>
+<view class="chosepost">
+    <view class="chosecontent">{{chosecontent}}</view>
+    <view class="chosename">{{chosename}}</view>
+    <view class="replybutton" wx:if="{{replyflag}}" bindtap="crtreply">回复</view>
+                <view wx:if="{{inputflag}}">
+                <form bindsubmit="replyto">
+                    <textarea name="replycontent" auto-height class="inputvalue"></textarea>
+                    <button form-type="submit" class="replybtn"> 回复 </button>
+                </form>
+                </view>
+</view>
     <scroll-view scroll-y class="listcontent">
         <view class="viewlist">
             <!--与论坛页面同理，之后补上后台交互参数-->
             <view class="replylist">
                 <!--细分为一级二级回复-->
-                <view class="replycontent">回复内容</view>
-                <view class="replycreator">回复人</view>
-                <navigator class="replybutton" url="#">回复</navigator>
+                <view 
+                wx:for="{{replies}}"
+                wx:key="id"
+                wx:for-item="item">
+                <view class="replycontent">{{item.content}}</view>
+                <view class="replycreator">{{item.puber.nickname}}</view>
+                </view>
                 <view class="divline"></view>
             </view>
         </view>

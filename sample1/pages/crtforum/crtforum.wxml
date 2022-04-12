@@ -8,8 +8,11 @@
     <block>
       <view class="inputcontent">论坛类别</view>
       <radio-group name = "classname">
-        <label><radio value="类别一">类别一</radio></label>
-        <label><radio value="类别二">类别二</radio></label>
+        <label><radio value="课程学习">课程学习</radio></label>
+        <label><radio value="考研保研">考研保研</radio></label>
+        <label><radio value="大创科研">大创科研</radio></label>
+        <label><radio value="竞赛前瞻">竞赛前瞻</radio></label>
+        <label><radio value="兴趣圈子">兴趣圈子</radio></label>
       </radio-group>
     </block>
     <button form-type="submit" class="submitbtn"> 创建 </button>

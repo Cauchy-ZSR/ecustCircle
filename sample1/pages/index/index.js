@@ -9,290 +9,59 @@ Page({
     rightcontent:[]
   },
 
-  onLoad:function(option){
-    let leftmenulist = [
-      {
-        id:1,
-        classname:"类别1",
-        children:[
-          {
-            forumtitle:"论坛标题1",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题2",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题3",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题4",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题5",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          }
-        ]
-      },
-      {
-        id:2,
-        classname:"类别2",
-        children:[
-          {
-            forumtitle:"论坛标题6",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题7",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题8",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题9",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题10",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          }
-        ]
-      },
-      {
-        id:3,
-        classname:"类别3",
-        children:[
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          }
-        ]
-      },
-      {
-        id:4,
-        classname:"类别4",
-        children:[
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          }
-        ]
-      },
-      {
-        id:5,
-        classname:"类别5",
-        children:[
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          }
-        ]
-      },
-      {
-        id:6,
-        classname:"类别6",
-        children:[
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          }
-        ]
-      },
-      {
-        id:7,
-        classname:"类别7",
-        children:[
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          },
-          {
-            forumtitle:"论坛标题",
-            forumcreator:"论坛作者",
-            forumdate:"日期"
-          }
-        ]
-      }
-    ]
-    let rightcontent = leftmenulist[0].children;
-    this.setData({
-      leftmenulist,
-      rightcontent
-    })
+  onShow:function(){
+    console.log('刷新');
+    if(wx.getStorageSync('forums')){
+        console.log('存');
+        let leftmenulist=wx.getStorageSync('forums');
+        let rightcontent = leftmenulist[1]['children'];
+        console.log()
+        this.setData({
+            leftmenulist,
+            rightcontent
+        })
+    }
+    wx.request({
+        url: 'http://127.0.0.1:8000/forumApi/forum/',
+        data: '',
+        method: 'get',
+        dataType: 'json',
+        responseType: 'text',
+        success: (result)=>{
+            // console.log('request');
+            
+            let leftmenulist=result.data.data;
+            let rightcontent = leftmenulist[1]['children'];
+            // console.log(rightcontent);
+            this.setData({
+                leftmenulist,
+                rightcontent
+              })
+            console.log('页面');
+            console.log(rightcontent);
+        }
+      })
   },
+
 
   selectclass(e){
     const  index   = e.currentTarget.dataset.index;
-    console.log(this.data.leftmenulist[index].children);
     let rightcontent = this.data.leftmenulist[index].children;
-    const choseid = index + 1;
-    console.log(choseid);
+    const choseid = index;
+    wx.setStorageSync('choseid', choseid);
     this.setData({
       rightcontent,
       choseid
     })
   },
 
-  jmptocrtforum(){
+  jmptocrtforum(){  
     wx.navigateTo({
       url: '/pages/crtforum/crtforum',
     })
-  }
+  },
+
+
 })
 
 

@@ -41,20 +41,15 @@
           <view class="iconfont icon-export"></view>
           <view class="order_name">已发送</view>
         </navigator>
-        <navigator url="{{existunread==true?'/pages/unread/unread':'#'}}">
-          <view class="iconfont {{existunread==true? 'icon-weiduxinxi':'icon-xiaoxi'}}"></view>
+        <navigator url="/pages/unread/unread">
+          <view class="iconfont {{existunread==true ? 'icon-weiduxinxi':'icon-xiaoxi'}}"></view>
           <view class="order_name">评论</view>
         </navigator>
       </view>
     </view>
-    <button wx:if="{{!firstuse && islogin}}" bindtap="jmptochange" class="changeinfo">
+    <button  bindtap="jmptochange" class="changeinfo">
       <view >
         <text>修改信息</text>
-      </view>
-    </button>
-    <button wx:if="{{!firstuse && islogin}}" bindtap="jmptocomplete" class="changeinfo">
-      <view >
-        <text>完善信息</text>
       </view>
     </button>
   </view>

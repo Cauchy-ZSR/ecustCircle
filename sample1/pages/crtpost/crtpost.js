@@ -3,13 +3,16 @@ Page({
   crtpost:function(e){
     var inputposttitle = e.detail.value.posttitle;
     var inputpostcontent = e.detail.value.postcontent;
+    var id = wx.getStorageSync('forumid');
     console.log(inputposttitle,inputpostcontent);
     wx.request({
       url: 'http://127.0.0.1:8000/forumApi/topic/create/',
       data: {
-        name:inputposttitle,
-        intro: inputpostcontent,
-        creater_id:wx.getStorageSync('number')
+        creater:wx.getStorageSync('number'),
+        pubForum:id,
+        title:inputposttitle,
+        content: inputpostcontent,
+        tag:'q'
       },
         header: {'content-type':'application/json'},
         method: 'post',
@@ -21,9 +24,9 @@ Page({
         fail: ()=>{},
         complete: ()=>{}
     })
-    wx.navigateBack({
-      delta: 1,
-    });
+    wx.navigateTo({
+      url: '/pages/post/post?id='+id,
+    })
   },
   /**
    * 页面的初始数据

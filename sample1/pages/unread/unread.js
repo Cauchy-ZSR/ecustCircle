@@ -11,21 +11,19 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-      let mail = [
-        {
-          sender:'张三',
-          title:'1',
-          content:'害嗨嘿'
-        },
-        {
-          sender:'李四',
-          title:'2',
-          content:'来咯'
-        }
-      ]
-      this.setData({
-        mail
+  onShow: function () {
+      wx.request({
+        url: 'http://127.0.0.1:8000/forumApi/comment/detail/is_read/'+wx.getStorageSync('usrdata').userNo,
+        data: '',
+    method: 'get',
+     dataType: 'json',
+    responseType: 'text',
+    success:(result)=>{
+        this.setData({
+            mail:result.data
+        })
+        console.log(result.data);
+    }
       })
   },
 
@@ -39,10 +37,6 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面隐藏
    */

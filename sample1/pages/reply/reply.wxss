@@ -1,7 +1,32 @@
 /* pages/reply/reply.wxss */
+page{
+    background-color: #f2f2f2;
+}
+
+.chosepost{
+    background-color: white;
+    border-bottom: 1rpx solid #f2f2f2;
+    position: fixed;
+    z-index: 1;
+    height: 140rpx;
+    width: 100%;
+}
+
+.chosecontent{
+    font-size: 50rpx;
+}
+
+.chosename{
+    font-size: 30rpx;
+}
+
 .listcontent{
     display: flex;
-    width: 100%;
+    width: 95%;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    top:140rpx;
   } 
 
 .viewpost{
@@ -27,7 +52,6 @@
     font-size: 10px;
     width: 100%;
     padding: 5px;
-    text-align: right;
     color: blue;
 }
 
@@ -35,4 +59,13 @@
     background: #f2f2f2;
     width: 100%;
     height: 1px;
+  }
+
+.inputvalue{
+    background-color: #f2f2f2;
+}
+
+  .replybtn{
+      background-color: #fc5531;
+      color: white;
   }

@@ -3,18 +3,21 @@
 }
 
 .mailtitle{
-  font-size: 30px;
+  font-size: 80rpx;
 }
-.mailsender{
-  font-size: 10px;
-  text-align: right;
-}
+
 .mailcontent{
-  font-size: 20px;
+  font-size: 60rpx;
 }
 
 .divline{
   background: #f2f2f2;
   width: 100%;
   height: 1px;
+}
+.mailforum{
+    font-size:40rpx;
+}
+.mailtime{
+    font-size: 30rpx;
 }

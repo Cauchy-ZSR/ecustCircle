@@ -15,30 +15,22 @@ Page({
   },
 
   login:function(){
-    usrname = wx.getStorageSync('usrname');
-    password = wx.getStorageSync('password');
+    var usrname = wx.getStorageSync('usrname');
+    var password = wx.getStorageSync('password');
     wx.request({
-      url: 'http://127.0.0.1:8000/userApi/user/retrieve/'+res.usrname+'/',//修改
+      url: 'http://127.0.0.1:8000/userApi/user/retrieve/'+usrname+'/',//修改
       data: '',
       header: {'content-type':'application/json'},
       method: 'get',
       dataType: 'json',
       responseType: 'text',
-      success: (result)=>{
-          console.log(result.data.code);
+      success: (res)=>{
+          wx.setStorageSync('usrdata',res.data);
           //修改： 验证登录 转向论坛界面
-          if(usrname == res.usrname && password ==res.password){
-            wx.navigateTo({
-              url: '/pages/index/index',
-              success: function(res){
-                // success
-              },
-              fail: function() {
-                // fail
-              },
-              complete: function() {
-                // complete
-              }
+          if(usrname == res.data.userNo && password == res.data.password){
+          console.log('228');
+            wx.switchTab({
+              url: '../me/me',
             })
           }
           

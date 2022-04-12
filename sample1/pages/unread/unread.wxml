@@ -3,7 +3,9 @@
 wx:for="{{mail}}"
 wx:key="*this"
 >
-<view class="mailtitle">{{item.content}}</view>
-<view class="mailcontent">{{item.sender}}</view>
+<navigator url="/pages/reply/reply?id={{item.topicComment}}">
+<view class="{{item.is_read == true?'mailtitle':'unreadmailtitle'}}">{{item.content}}</view>
+<view class="{{item.is_read == true?'mailcontent':'unreadmailcontent'}}">{{item.puber.nickname}}</view>
 <view class="divline"></view>
+</navigator>
 </view>

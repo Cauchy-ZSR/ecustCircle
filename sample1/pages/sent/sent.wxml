@@ -5,5 +5,7 @@ wx:key="*this"
 >
 <view class="mailtitle">{{item.title}}</view>
 <view class="mailcontent">{{item.content}}</view>
+<view class="mailforum">论坛：{{item.range.name}}</view>
+<view class="mailtime">时间:{{item.range.created_time}}</view>
 <view class="divline"></view>
 </view>

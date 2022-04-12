@@ -3,8 +3,8 @@
 wx:for="{{mail}}"
 wx:key="*this"
 >
-<view class="mailtitle">{{item.title}}</view>
-<view class="mailsender">来自：{{item.sender}}</view>
-<view class="mailcontent">{{item.content}}</view>
+<view class="mailtitle">{{item.notice.title}}</view>
+<view class="mailsender">来自：{{item.notice.sender.nickname}}</view>
+<view class="mailcontent">{{item.notice.content}}</view>
 <view class="divline"></view>
 </view>

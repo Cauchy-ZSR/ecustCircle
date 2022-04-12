@@ -9,21 +9,17 @@ Page({
     hasUserInfo: false,
     canIUseGetUserProfile: false,
     existunread:false,
-    islogin:true
-  },
-  onShow(){
-    const userinfo=wx.getStorageSync("userinfo");
-      
-    this.setData({userinfo});
-      
+    islogin:true,
   },
 
-  onLoad(){
-    var position="学生";
-    var number = "88888888";
-    var sex = "男";
+  onShow:function(){
+    const userinfo=wx.getStorageSync("userinfo");
+    this.setData({userinfo});
+    var position=wx.getStorageSync('usrdata').identity;
+    var number = wx.getStorageSync('usrdata').userNo;
+    var sex = wx.getStorageSync('usrdata').sex;
     var tel = "158****7163";
-    var email = "ecust_***@163.com";
+    var email = wx.getStorageSync('usrdata').email;
     this.setData({
       position,number,sex,tel,email
     })
@@ -33,7 +29,28 @@ Page({
       this.setData({
         canIUseGetUserProfile: true
       })
+    };
+    wx.request({
+    url: 'http://127.0.0.1:8000/forumApi/comment/is_read/'+wx.getStorageSync('usrdata').userNo,
+    data: '',
+    method: 'get',
+     dataType: 'json',
+    responseType: 'text',
+    success:(result)=>{
+        console.log('?'+this.data.existunread);
+        console.log(result.data.code);
+        if(result.data.code=='201'){
+            this.setData({
+                existunread : true
+            })
+        }
+        else{
+            this.setData({
+                existunread:false
+            })
+        }
     }
+    })
   },
 
   jmptochange:function(){

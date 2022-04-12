@@ -5,6 +5,12 @@
 .mailtitle{
   font-size: 30px;
 }
+
+.unreadmailtitle{
+    font-size: 30px;
+    color: #fc5531;
+  }
+
 .mailsender{
   font-size: 10px;
   text-align: right;
@@ -12,6 +18,11 @@
 .mailcontent{
   font-size: 20px;
 }
+
+.unreadmailcontent{
+    font-size: 20px;
+    color:#fc5531;
+  }
 
 .divline{
   background: #f2f2f2;
